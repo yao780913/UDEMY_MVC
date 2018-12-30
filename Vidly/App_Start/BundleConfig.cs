@@ -22,8 +22,9 @@ namespace Vidly
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
 
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap-lumen.css", // 注意, 需要抓 第三版的 bootswatch   https://bootswatch.com/3/lumen/bootstrap.css
                       "~/Content/site.css"));
         }
     }
