@@ -14,6 +14,12 @@ namespace Vidly.Controllers
         {
             var movie = new Movie() { Name = "Sherk!" };
             return View(movie);
+            //return Content("Hello World");
+            //return HttpNotFound();
+            //return new EmptyResult();
+            //return RedirectToAction("Index", "Home", new { page = 1, sortBy = "Name"});
+
+
         }
     }
 }
