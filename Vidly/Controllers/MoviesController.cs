@@ -21,23 +21,34 @@ namespace Vidly.Controllers
             //return RedirectToAction("Index", "Home", new { page = 1, sortBy = "Name"});
         }
 
-        public ActionResult Edit(int id)
-        {
-            // http://localhost:50194/Movies/edit/5
-            // http://localhost:50194/Movies/edit?id=10
-            return Content("id=" + id);
-        }
 
-        
-        public ActionResult Index(int? pageIndex, string sortBy)
+        public ActionResult ByReleaseDate(int year, int month)
         {
-            // http://localhost:50194/Movies?pageIndex=5&sortBy=releaseDate
-            if (!pageIndex.HasValue)
-                pageIndex = 1;
 
-            if (string.IsNullOrWhiteSpace(sortBy))
-                sortBy = "Name";
-            return Content(string.Format("pageIndex={0} & sort={1}", pageIndex, sortBy));
+            // http://localhost:50194/movies/released/2018/05
+            return Content(year + "/" + month);
         }
+        #region 11. Aciton Parameters
+        //public ActionResult Edit(int id)
+        //{
+        //    // http://localhost:50194/Movies/edit/5
+        //    // http://localhost:50194/Movies/edit?id=10
+        //    return Content("id=" + id);
+        //}
+
+
+        //public ActionResult Index(int? pageIndex, string sortBy)
+        //{
+        //    // http://localhost:50194/Movies?pageIndex=5&sortBy=releaseDate
+        //    if (!pageIndex.HasValue)
+        //        pageIndex = 1;
+
+        //    if (string.IsNullOrWhiteSpace(sortBy))
+        //        sortBy = "Name";
+        //    return Content(string.Format("pageIndex={0} & sort={1}", pageIndex, sortBy));
+        //}
+        #endregion
+
+
     }
 }
