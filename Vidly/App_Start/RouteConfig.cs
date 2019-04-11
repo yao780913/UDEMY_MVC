@@ -17,7 +17,8 @@ namespace Vidly
                 "MoviesByReleaseDate",
                 "movies/released/{year}/{month}",
                 new { controller = "Movies", action = "ByReleaseDate" },
-                new { year = @"\d{4}", month = @"\d{2}"});
+                new { year = @"\d{4}", month = @"\d{2}"}); // 限定字元: 4位數 & 2位數
+                //new { year = @"2015|2016", month = @"\d{2}"}); // 限定 year = 2015 or 2016
             /*
              有一樣的效果
                 year = "\\d{4}"
