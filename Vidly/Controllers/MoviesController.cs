@@ -21,8 +21,9 @@ namespace Vidly.Controllers
             //return RedirectToAction("Index", "Home", new { page = 1, sortBy = "Name"});
         }
 
-
-        public ActionResult ByReleaseDate(int year, int month)
+        // 避免在 RouteConfig.cs 的routes.MapRoute 底下寫死, 在這指定 路徑
+        [Route("movies/released/{year}/{month:regex(\\d{2}):range(1, 12)}")]
+        public ActionResult ByReleaseYear(int year, int month)
         {
 
             // http://localhost:50194/movies/released/2018/05
