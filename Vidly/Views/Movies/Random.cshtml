@@ -1,8 +1,14 @@
-﻿@model Vidly.Models.Movie
+﻿@*@using Vidly.Models*@
+@*@model Vidly.Models.Movie*@
+@model Vidly.ViewModels.RandomMovieViewＭodel
+
 @{
     ViewBag.Title = "Random";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Random</h2>
-<span>@Model.Name</span>
+    <h2>
+        @Model.Movie.Name
+        @Model.Customers
+    </h2>
+    
